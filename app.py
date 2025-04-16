@@ -34,4 +34,7 @@ def chat():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+@app.route("/")
+def home():
+    return "Your AI app is running! Use the /chat endpoint to send a POST request."
 
